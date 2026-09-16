@@ -212,8 +212,9 @@ footer {
         margin-top: 20px;
     }
 
-    .contact {
-        font-size: 19px;
+   .contact {
+        font-size: 12px;
+        line-height: 1.6;
     }
 
     footer {
