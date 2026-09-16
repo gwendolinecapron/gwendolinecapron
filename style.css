@@ -192,6 +192,21 @@ footer {
     .project {
         display: block;
     }
+    
+    .project-info-side {
+        position: static;
+        margin-bottom: 40px;
+    }
+
+    .project-description {
+        max-width: 100%;
+        margin-top: 25px;
+    }
+
+    .project-videos {
+        gap: 30px;
+    }
+
 
     .project-description {
         margin-top: 20px;
