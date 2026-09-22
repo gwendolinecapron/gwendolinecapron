@@ -1,3 +1,7 @@
+/* --------------------------------
+   RESET
+-------------------------------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,12 +13,17 @@ html {
 }
 
 body {
-    background: #fff;
+    background: #f8f8f6;
     color: #111;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    line-height: 1.4;
+    font-size: 15px;
+    line-height: 1.35;
 }
+
+
+/* --------------------------------
+   LINKS
+-------------------------------- */
 
 a {
     color: inherit;
@@ -22,202 +31,247 @@ a {
 }
 
 a:hover {
-    opacity: 0.5;
+    opacity: 0.45;
 }
 
-/* HEADER */
 
-header {
+/* --------------------------------
+   HEADER
+-------------------------------- */
+
+.site-header {
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
-    padding: 22px 28px;
+
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    background: rgba(255,255,255,0.95);
+
+    padding: 22px 24px;
+
     z-index: 100;
 }
 
-.name {
-    font-size: 14px;
+.logo {
+    font-size: 15px;
 }
 
-nav {
+.navigation {
     display: flex;
     gap: 25px;
 }
 
-nav a {
-    text-transform: uppercase;
+.navigation a {
+    transition: opacity 0.2s ease;
 }
 
-/* MAIN */
+
+/* --------------------------------
+   MAIN
+-------------------------------- */
 
 main {
-    padding: 120px 28px 80px;
+    width: 100%;
 }
 
-.page-title {
-    font-size: 13px;
-    text-transform: uppercase;
-    margin-bottom: 70px;
-}
 
-/* ACCUEIL */
+/* --------------------------------
+   INTRO
+-------------------------------- */
 
-.hero {
-    min-height: 80vh;
+.intro {
+    min-height: 100vh;
+
     display: flex;
-    align-items: flex-end;
+    align-items: center;
+
+    padding: 120px 24px 80px;
 }
 
-.hero h1 {
-    font-size: 42px;
+.intro-text {
+    width: min(650px, 80vw);
+
+    font-size: 28px;
+    line-height: 1.15;
+}
+
+.intro-text p {
+    margin-bottom: 28px;
+}
+
+
+/* --------------------------------
+   SECTIONS
+-------------------------------- */
+
+.project-section {
+    padding: 140px 24px 120px;
+}
+
+.project-section h1 {
+    font-size: 15px;
     font-weight: normal;
-    max-width: 700px;
-    line-height: 1.05;
+
+    margin-bottom: 60px;
 }
 
-/* PROJETS */
 
-.project {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 60px;
-    padding: 20px 0;
-    border-top: 1px solid #ddd;
-}
+/* --------------------------------
+   PROJECTS
+-------------------------------- */
 
-.project-info-side {
-    position: sticky;
-    top: 120px;
-    align-self: start;
-}
-
-.project-description {
-    margin-top: 40px;
-    max-width: 320px;
-    color: #555;
-}
-
-.project-videos {
+.projects {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+
+    gap: 120px;
+
+    max-width: 1100px;
 }
 
-.project-videos .video {
+.project {
     width: 100%;
-    margin: 0;
 }
 
-
-.project:last-child {
-    border-bottom: 1px solid #ddd;
+.project-image {
+    width: 100%;
+    overflow: hidden;
+    background: #ddd;
 }
 
-.project-title {
-    font-size: 17px;
+.project-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    transition: transform 0.6s ease;
+}
+
+.project:hover img {
+    transform: scale(1.015);
 }
 
 .project-info {
-    color: #777;
-    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 10px;
+
+    font-size: 13px;
 }
 
-.project-description {
-    max-width: 600px;
+.project-info h2 {
+    font-size: 13px;
+    font-weight: normal;
 }
 
-/* VIDEOS */
 
-.video {
+/* --------------------------------
+   ART
+-------------------------------- */
+
+.art-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 20px;
+
+    max-width: 1100px;
+}
+
+.art-grid img {
+    display: block;
+
     width: 100%;
-    aspect-ratio: 16 / 9;
-    background: #eee;
-    margin-top: 20px;
+    height: auto;
 }
 
-.video iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
 
-/* CONTACT */
-
-.contact {
-    font-size: 24px;
-    line-height: 1.5;
-}
-
-.contact a {
-    text-decoration: underline;
-    text-underline-offset: 5px;
-}
-
-/* FOOTER */
+/* --------------------------------
+   FOOTER
+-------------------------------- */
 
 footer {
-    padding: 30px 28px;
-    color: #777;
-    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    padding: 80px 24px 25px;
+
+    font-size: 13px;
 }
 
-/* MOBILE */
+footer div {
+    max-width: 33%;
+}
+
+
+/* --------------------------------
+   MOBILE
+-------------------------------- */
 
 @media (max-width: 700px) {
 
-    header {
+    body {
+        font-size: 14px;
+    }
+
+    .site-header {
+        position: relative;
+
         padding: 18px;
-        display: block;
     }
 
-    nav {
-        margin-top: 12px;
-        gap: 15px;
-        flex-wrap: wrap;
+    .navigation {
+        gap: 12px;
+
+        flex-direction: column;
+        align-items: flex-end;
     }
 
-    main {
-        padding: 130px 18px 60px;
+    .intro {
+        min-height: 80vh;
+
+        padding: 100px 18px 60px;
     }
 
-    .hero h1 {
-        font-size: 30px;
+    .intro-text {
+        width: 100%;
+
+        font-size: 23px;
     }
 
-    .project {
-        display: block;
-    }
-    
-    .project-info-side {
-        position: static;
-        margin-bottom: 40px;
+    .project-section {
+        padding: 90px 18px;
     }
 
-    .project-description {
-        max-width: 100%;
-        margin-top: 25px;
+    .projects {
+        gap: 70px;
     }
 
-    .project-videos {
-        gap: 30px;
-    }
+    .art-grid {
+        grid-template-columns: 1fr;
 
-
-    .project-description {
-        margin-top: 20px;
-    }
-
-   .contact {
-        font-size: 12px;
-        line-height: 1.6;
+        gap: 12px;
     }
 
     footer {
-        padding: 25px 18px;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 12px;
+
+        padding: 60px 18px 20px;
+    }
+
+    footer div {
+        max-width: none;
     }
 }
