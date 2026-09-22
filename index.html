@@ -4,12 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'London')">Video</button>
-  <button class="tablinks" onclick="openCity(event, 'Paris')">Pictures</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Objects</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Paintings</button>
-  <button class="tablinks" onclick="openCity(event, 'Tokyo')">Paintings</button>
+	<script>
+function openCity(evt, cityName) {
+    var i;
+    var tabcontent = document.getElementsByClassName("tabcontent");
+    var tablinks = document.getElementsByClassName("tablinks");
+
+    for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
+    }
+
+    for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(cityName).style.display = "block";
+    evt.currentTarget.className += " active";
+}
+</script>
+
+<body>
+
+	<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Video')">Video</button>
+  <button class="tablinks" onclick="openCity(event, 'Pictures')">Pictures</button>
+  <button class="tablinks" onclick="openCity(event, 'Objects')">Objects</button>
+  <button class="tablinks" onclick="openCity(event, 'Paintings')">Paintings</button>
+  <button class="tablinks" onclick="openCity(event, 'Bio')">Bio</button>
 </div>
 
 <div id="Video" class="tabcontent">
@@ -17,16 +38,18 @@
 </div>
 
 <div id="Pictures" class="tabcontent">
-  <p>Paris is the capital of France.</p>
 </div>
 
 <div id="Objects" class="tabcontent">
-  <p>Tokyo is the capital of Japan.</p>
+</div>
+
+<div id="Paintings" class="tabcontent">
+</div>
+
+<div id="Bio" class="tabcontent">
 </div>
 
 <link rel="stylesheet" href="style.css">
-
-<body>
 
     <a href="video.html">
 	<p style= "text-align:left;">video</p>
