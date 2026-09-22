@@ -1,81 +1,96 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<script>
-function openCity(evt, cityName) {
-    var i;
-    var tabcontent = document.getElementsByClassName("tabcontent");
-    var tablinks = document.getElementsByClassName("tablinks");
 
-    for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-    }
+    <link rel="stylesheet" href="style.css">
 
-    for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-    }
+    <script>
+        function openCity(evt, cityName) {
+            var i;
+            var tabcontent = document.getElementsByClassName("tabcontent");
+            var tablinks = document.getElementsByClassName("tablinks");
 
-    document.getElementById(cityName).style.display = "block";
-    evt.currentTarget.className += " active";
-}
-</script>
+            // Cacher tous les contenus
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Retirer "active" de tous les boutons
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Afficher le contenu sélectionné
+            document.getElementById(cityName).style.display = "block";
+
+            // Activer le bouton sélectionné
+            evt.currentTarget.className += " active";
+        }
+    </script>
+</head>
 
 <body>
 
-	<div class="tab">
-  <button class="tablinks" onclick="openCity(event, 'Video')">Video</button>
-  <button class="tablinks" onclick="openCity(event, 'Pictures')">Pictures</button>
-  <button class="tablinks" onclick="openCity(event, 'Objects')">Objects</button>
-  <button class="tablinks" onclick="openCity(event, 'Paintings')">Paintings</button>
-  <button class="tablinks" onclick="openCity(event, 'Bio')">Bio</button>
-</div>
+    <nav class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Video')">
+            Video
+        </button>
 
-<div id="Video" class="tabcontent">
-  <img src="images/swim.png">
-</div>
+        <button class="tablinks" onclick="openCity(event, 'Pictures')">
+            Pictures
+        </button>
 
-<div id="Pictures" class="tabcontent">
-</div>
+        <button class="tablinks" onclick="openCity(event, 'Objects')">
+            Objects
+        </button>
 
-<div id="Objects" class="tabcontent">
-</div>
+        <button class="tablinks" onclick="openCity(event, 'Paintings')">
+            Paintings
+        </button>
 
-<div id="Paintings" class="tabcontent">
-</div>
+        <button class="tablinks" onclick="openCity(event, 'Bio')">
+            Bio
+        </button>
+    </nav>
 
-<div id="Bio" class="tabcontent">
-</div>
 
-<link rel="stylesheet" href="style.css">
+    <main>
 
-    <a href="video.html">
-	<p style= "text-align:left;">video</p>
-</a>
-		<br>
+        <section id="Video" class="tabcontent">
+            <img src="images/swim.png" alt="Video">
+        </section>
 
-	<a href="photo.html">
-	<p style= "text-align:left;">photo</p>
-</a>
-		<br>
-	
-	<a href="objects.html">
-	<p style= "text-align:left;">objects</p>
-</a>
-		<br>
 
-	<a href="paintings.html">
-	<p style= "text-align:left;">paintings</p>
-</a>
-		<br>
+        <section id="Pictures" class="tabcontent">
+            <!-- Tes images ici -->
+        </section>
 
-	<a href="contact.html">
-	<p style= "text-align:left;">contact</p>
-</a>
-		<br>
 
-<aside class="sidebar">
+        <section id="Objects" class="tabcontent">
+            <!-- Tes objets ici -->
+        </section>
 
-</body> </html>
+
+        <section id="Paintings" class="tabcontent">
+            <!-- Tes peintures ici -->
+        </section>
+
+
+        <section id="Bio" class="tabcontent">
+            <!-- Ta biographie ici -->
+        </section>
+
+    </main>
+
+
+    <script>
+        // Ouvre automatiquement le premier onglet
+        document.querySelector(".tablinks").click();
+    </script>
+
+</body>
+</html>
