@@ -1,252 +1,146 @@
-/* --------------------------------
-   RESET
--------------------------------- */
 
 * {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100%;
 }
 
 body {
-    background: #f8f8f6;
-    color: #111;
+    background: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 20px;
-    line-height: 1.35;
-    padding: 20px;
+    font-size: 14px;
 }
 
 
-/* --------------------------------
-   LINKS
--------------------------------- */
+/* =========================
+   NAVIGATION
+========================= */
 
-a {
-    color: inherit;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-a:hover {
-    opacity: 0.45;
-}
-
-
-/* --------------------------------
-   HEADER
--------------------------------- */
-
-.site-header {
+.tab {
     position: fixed;
-
-    top: 0;
     left: 0;
+    top: 0;
 
-    width: 100%;
+    width: 55px;
+    height: 100vh;
 
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 
-    padding: 22px 30px;
+    gap: 28px;
+
+    padding-top: 25px;
 
     z-index: 100;
 }
 
-.logo {
-    font-size: 15px;
-}
 
-.navigation {
-    display: flex;
-    gap: 25px;
-}
+/* Les mots */
 
-.navigation a {
+.tablinks {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+
+    border: none;
+    background: none;
+
+    padding: 0;
+    margin: 0;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: normal;
+
+    color: black;
+
+    cursor: pointer;
+
+    letter-spacing: 0;
+
     transition: opacity 0.2s ease;
 }
 
 
-/* --------------------------------
-   MAIN
--------------------------------- */
+/* Quand on passe dessus */
+
+.tablinks:hover {
+    opacity: 0.45;
+}
+
+
+/* Onglet actif */
+
+.tablinks.active {
+    opacity: 0.45;
+}
+
+
+/* =========================
+   CONTENU
+========================= */
 
 main {
-    width: 100%;
-    padding: 0 30px;
-}
+    margin-left: 55px;
 
-
-/* --------------------------------
-   INTRO
--------------------------------- */
-
-.intro {
+    width: calc(100% - 55px);
     min-height: 100vh;
-
-    display: flex;
-    align-items: center;
-
-    padding: 120px 30px 80px;
 }
 
-.intro-text {
-    width: min(650px, 80vw);
-
-    font-size: 14px;
-    line-height: 1.15;
-}
-
-.intro-text p {
-    margin-bottom: 28px;
-}
-
-
-/* --------------------------------
-   SECTIONS
--------------------------------- */
-
-.project-section {
-    padding: 140px 30px 120px;
-}
-
-.project-section h1 {
-    font-size: 15px;
-    font-weight: normal;
-
-    margin-bottom: 60px;
-}
-
-
-/* --------------------------------
-   PROJECTS
--------------------------------- */
-
-.projects {
-    display: flex;
-    flex-direction: column;
-
-    gap: 120px;
-
-    max-width: 1100px;
-}
-
-.project {
-    width: 100%;
-}
-
-.project-image {
-    width: 100%;
-    overflow: hidden;
-    background: #ddd;
-}
-
-.project-image img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-
-    transition: transform 0.6s ease;
-}
-
-.project:hover img {
-    transform: scale(1.015);
-}
-
-.project-info {
-    display: flex;
-    justify-content: space-between;
-
-    margin-top: 10px;
-
-    font-size: 13px;
-}
-
-.project-info h2 {
-    font-size: 13px;
-    font-weight: normal;
-}
-
-
-/* --------------------------------
-   ART
--------------------------------- */
-
-.art-grid {
-    display: grid;
-
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 20px;
-
-    max-width: 1100px;
-}
-
-.art-grid img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-}
 
 .tabcontent {
     display: none;
+
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 25px;
 }
 
-/* --------------------------------
+
+/* =========================
+   IMAGES
+========================= */
+
+.tabcontent img {
+    display: block;
+
+    max-width: 100%;
+    height: auto;
+}
+
+
+/* =========================
    MOBILE
--------------------------------- */
+========================= */
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
 
-    body {
+    .tab {
+        width: 45px;
+        gap: 22px;
+        padding-top: 20px;
+    }
+
+    .tablinks {
         font-size: 14px;
     }
 
-    .site-header {
-        position: relative;
-
-        padding: 18px;
+    main {
+        margin-left: 45px;
+        width: calc(100% - 45px);
     }
 
-    .navigation {
-        gap: 12px;
-
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-    .intro {
-        min-height: 80vh;
-
-        padding: 100px 18px 60px;
-    }
-
-    .intro-text {
-        width: 100%;
-
-        font-size: 23px;
-    }
-
-    .project-section {
-        padding: 90px 18px;
-    }
-
-    .projects {
-        gap: 70px;
-    }
-
-    .art-grid {
-        grid-template-columns: 1fr;
-
-        gap: 12px;
-       
+    .tabcontent {
+        padding: 15px;
     }
 }
+```
