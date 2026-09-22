@@ -96,7 +96,7 @@ main {
 .intro-text {
     width: min(650px, 80vw);
 
-    font-size: 28px;
+    font-size: 14px;
     line-height: 1.15;
 }
 
