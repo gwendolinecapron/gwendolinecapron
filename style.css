@@ -9,36 +9,32 @@ body {
 }
 
 body {
+    background: white;
+    color: black;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 14px;
-    color: black;
-    background: white;
 }
 
 
-/* NAVIGATION */
+/* =========================
+   MENU
+========================= */
 
-.tab {
+nav {
     position: fixed;
-    left: 20px;
     top: 20px;
+    left: 20px;
 
     display: flex;
     flex-direction: column;
-
     gap: 5px;
 
-    z-index: 100;
+    z-index: 1000;
 }
 
-
-/* BOUTONS */
-
-.tablinks {
-    display: block;
-
-    border: 0;
-    background: transparent;
+nav button {
+    border: none;
+    background: none;
 
     padding: 0;
     margin: 0;
@@ -48,57 +44,69 @@ body {
     font-weight: normal;
 
     color: black;
-
     text-align: left;
 
     cursor: pointer;
-
-    /* IMPORTANT : aucun texte vertical */
-    writing-mode: horizontal-tb;
-    transform: none;
 }
 
+nav button:hover {
+    opacity: 0.5;
+}
 
-/* SURVOL */
-
-.tablinks:hover {
+nav button.active {
     opacity: 0.5;
 }
 
 
-/* ONGLET ACTIF */
-
-.tablinks.active {
-    opacity: 0.5;
-}
-
-
-/* CONTENU */
+/* =========================
+   CONTENU
+========================= */
 
 main {
-    margin-left: 20px;
-    padding-top: 20px;
+    width: 100%;
+    padding: 20px 20px 80px 20px;
 }
 
 
-/* SECTIONS */
+/* =========================
+   ONGLETS
+========================= */
 
 .tabcontent {
     display: none;
 }
 
 
-/* IMAGES */
+/* =========================
+   VIDEOS
+========================= */
+
+.video {
+    width: 600px;
+    max-width: calc(100vw - 40px);
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   VIDEO RESPONSIVE
+========================= */
+
+.video iframe {
+    display: block;
+}
+
+
+/* =========================
+   IMAGES
+========================= */
 
 .tabcontent img {
     display: block;
+
     max-width: 100%;
     height: auto;
 }
-
-.video {
-    width: calc(100% - 100px);
-    margin-left: 130px;
-    margin-bottom: 40px;
-}
-
