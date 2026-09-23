@@ -97,8 +97,8 @@ main {
 }
 
 .video {
-    width: calc(100% - 160px);
-    margin-left: 80px;
-    margin-bottom: 20px;
+    width: calc(100% - 100px);
+    margin-left: 130px;
+    margin-bottom: 40px;
 }
 
