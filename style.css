@@ -111,13 +111,13 @@ main {
     height: auto;
 }
 
-.object {
+.eidtion {
     display: flex;
     justify-content: flex-end;
     width: 100%;
 }
 
-.object img {
+.edition img {
     width: 50%;
     height: auto;
 }
