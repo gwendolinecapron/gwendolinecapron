@@ -40,7 +40,7 @@ nav button {
     margin: 0;
 
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: normal;
 
     color: black;
@@ -82,7 +82,7 @@ main {
 ========================= */
 
 .video {
-    width: 600px;
+    width: 1000px;
     max-width: calc(100vw - 40px);
 
     margin-left: auto;
