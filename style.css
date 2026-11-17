@@ -111,3 +111,12 @@ main {
     width: 300px;
     height: auto;
 }
+
+.photo {
+    width: 1000px;
+    max-width: calc(100vw - 40px);
+
+    margin-left: 400px;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
