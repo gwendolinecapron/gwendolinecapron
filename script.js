@@ -17,3 +17,14 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     });
 
 });
+
+function showVideo(videoName) {
+
+    var videos = document.getElementsByClassName("film-content");
+
+    for (var i = 0; i < videos.length; i++) {
+        videos[i].style.display = "none";
+    }
+
+    document.getElementById(videoName).style.display = "block";
+}
