@@ -110,3 +110,14 @@ main {
     max-width: 100%;
     height: auto;
 }
+
+.object {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.object img {
+    width: 50%;
+    height: auto;
+}
