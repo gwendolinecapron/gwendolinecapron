@@ -112,11 +112,10 @@ main {
     height: auto;
 }
 
-.photo {
-    width: 1000px;
-    max-width: calc(100vw - 40px);
-
-    margin-left: 400px;
+.photos img {
+    width: 66.666%;
+    height: auto;
+    margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
 }
